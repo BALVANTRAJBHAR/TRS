@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRS FORMS & SERVICES PVT. LTD.</title>
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        /*header h1 {
+            margin: 0;
+        }*/
+
+
+/* Logo */
+.logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 50px; /* Adjust logo size */
+        }
+
+        /* Animated Tech Text */
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+            color: rgb(221, 11, 11);
+            animation: fadeInScale 2s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+
+        /* Navigation Bar Styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Main Section Styles */
+        .main-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+            background-color: #fff;
+        }
+
+        .main-section div {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .main-section h2 {
+            color: #333;
+        }
+
+        .main-section p {
+            color: #555;
+        }
+
+        /* Features Section Styles */
+        .features {
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+
+        .features h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .feature {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #333;
+        }
+
+        .about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .about p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* Contact Info Card */
+        .contact-info {
+            font-size: 18px;
+            padding: 50px;
+            color: #555;
+        }
+
+        .contact-info h2 {
+            text-align: center;
+            color: #03dd32;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 300px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 100.1);
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            margin: 10px 0;
+        }
+
+        .contact-card a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        /* Privacy Section */
+        .privacy {
+            background-color: #fff;
+            padding: 100px;
+        }
+
+        .privacy h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .privacy p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-section {
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .feature-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .contact-card {
+                width: 90%;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 12px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header h2 {
+                font-size: 20px;
+            }
+
+            .contact-info p {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img src="TRSF LG.jfif" alt="Logo" class="logo"> <!-- Replace with your logo image -->
+        
+        <h1>TRS FORMS & SERVICES PVT. LTD.</h1>
+        <h2>Service-Based Software</h2>
+        <p>Revolutionize your business with our cutting-edge software solutions</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#contact-info">Contact</a>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <div>
+            <h2>Streamline Your Operations</h2>
+            <p>Our software solution helps automate your business processes, saving time and increasing productivity.</p>
+        </div>
+        <div>
+            <h2>Cloud-Based and Scalable</h2>
+            <p>With our cloud infrastructure, you can scale your business seamlessly without worrying about limitations.</p>
+        </div>
+        <div>
+            <h2>Data-Driven Insights</h2>
+            <p>Unlock powerful analytics that help you make informed decisions with real-time data tracking.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Key Features</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <h3>Real-Time Analytics</h3>
+                <p>Track performance and metrics in real-time for better decision making.</p>
+            </div>
+            <div class="feature">
+                <h3>Secure Cloud Storage</h3>
+                <p>Your data is safe and accessible anytime, anywhere with our secure cloud storage solutions.</p>
+            </div>
+            <div class="feature">
+                <h3>Seamless Integration</h3>
+                <p>Our software integrates with your existing tools and systems for a smooth transition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About TRS FORMS & SERVICES PVT. LTD.</h2>
+        <img src="abtus.jpg" alt="About Tech">
+        <p>We are TRS FORMS & SERVICES PVT. LTD., a leading provider of innovative software solutions. Our goal is to make your business operations more efficient and provide powerful tools for growth. With years of experience, we specialize in delivering high-quality software tailored to meet the needs of various industries.</p>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section id="contact-info" class="contact-info">
+        <h2>Contact Us</h2>
+        <div class="contact-card">
+            <h3>Get In Touch</h3>
+            <p><strong>Address:</strong> DELHI, India</p>
+            <p><strong>Phone:</strong> <a href="tel:+91 TEST">+91 TEST</a></p>
+            <p><strong>Email:</strong> <a href="mailto:TRS@mail.com">TRS@mail.com</a></p>
+            <p><strong>YouTube:</strong> <a href="https://www.youtube.com/@BalvantTrendyTech" target="_blank">youtube/TRS</a></p>
+        </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section id="privacy" class="privacy">
+        <h2>Privacy Policy</h2>
+        <p>Your privacy is important to us. We are committed to protecting your personal information and ensuring that it is used only in ways that benefit you. Our software complies with all relevant privacy laws and regulations, and we take necessary measures to safeguard your data.</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 TRS FORMS | All Rights Reserved</p>
+    </footer> 
+
+</body>
+</html>
