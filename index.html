@@ -151,6 +151,48 @@
             font-size: 18px;
         }
 
+                 /* Employee Scrolling Section */
+         .employee-scroll {
+            width: 100%;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .employee {
+            display: none; /* Hide all employees initially */
+            align-items: center;
+            opacity: 0;
+            transform: translateX(100%); /* Start position off-screen */
+            padding: 10px;
+            margin-right: 20px;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .employee-img {
+            width: 200px; /* Medium-sized image */
+            height: 200px;
+            border-radius: 50%; /* Circular image */
+            margin-right: 20px;
+        }
+
+        .employee-info h3, .employee-info p {
+            margin: 0;
+            color: #10aa36ee;
+        }
+
+        .employee-info h3 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .employee-info p {
+            font-size: 14px;
+            color: #d33737;
+        }
+
         /* Contact Info Card */
         .contact-info {
             font-size: 18px;
@@ -333,6 +375,87 @@
         <p>We are TRS FORMS & SERVICES PVT. LTD., a leading provider of innovative software solutions. Our goal is to make your business operations more efficient and provide powerful tools for growth. With years of experience, we specialize in delivering high-quality software tailored to meet the needs of various industries.</p>
     </section>
 
+     <!-- Employee Scrolling Section -->
+<section class="employee-scroll">
+    <div class="employee">
+        <img src="bbu.jpg" alt="Employee Image" class="employee-img">
+        <div class="employee-info">
+            <h3>Mr. Subramanian Narayanasamy</h3>
+            <p>Chairman</p>
+        </div>
+    </div>
+    <div class="employee">
+        <img src="kml.jpg" alt="Employee Image" class="employee-img">
+        <div class="employee-info">
+            <h3>Mr. Arvind Subramanian</h3>
+            <p>Director</p>
+        </div>
+    </div>
+
+    <div class="employee">
+        <img src="bbu.jpg" alt="Employee Image" class="employee-img">
+        <div class="employee-info">
+            <h3>Mr. Babukumar R</h3>
+            <p>Manager Delhi Branch</p>
+        </div>
+    </div>
+
+    <div class="employee">
+        <img src="employee2.jpg" alt="Employee 2Image" class="employee-img">
+        <div class="employee-info">
+            <h3>Mr. Rajkumar Gupta</h3>
+            <p>HR Delhi Branch</p>
+        </div>
+    </div>
+
+    <div class="employee">
+        <img src="kml.jpg" alt="Employee Image" class="employee-img">
+        <div class="employee-info">
+            <h3>Mr. Kmalesh</h3>
+            <p> Sr. Software Engineer</p>
+        </div>
+    </div>
+
+    <div class="employee">
+        <img src="kml.jpg" alt="Employee Image" class="employee-img">
+        <div class="employee-info">
+            <h3>Mr. Pradeep Yadav</h3>
+            <p> Sr. Software Engineer</p>
+        </div>
+    </div>
+    <div class="employee">
+        <img src="employee2.jpg" alt="Employee Image2" class="employee-img">
+        <div class="employee-info">
+            <h3>Mr. Deepraj Prajapati</h3>
+            <p>Sr. Software Engineer</p>
+        </div>
+    </div>
+
+    <div class="employee">
+        <img src="employee2.jpg" alt="Employee 2Image" class="employee-img">
+        <div class="employee-info">
+            <h3>Mr. Abhilash</h3>
+            <p>Sr. Team Leader</p>
+        </div>
+    </div>
+
+    <div class="employee">
+        <img src="BTRr.jpg" alt="Employee Image" class="employee-img">
+        <div class="employee-info">
+            <h3>Balvant Rajbhar</h3>
+            <p>Software Engineer</p>
+        </div>
+    </div>
+    <div class="employee">
+        <img src="employee2.jpg" alt="Employee 2Image" class="employee-img">
+        <div class="employee-info">
+            <h3>Lal Babu Shukla</h3>
+            <p>Software Engineer</p>
+        </div>
+    </div>
+    <!-- Add more employee divs as needed -->
+</section>
+
     <!-- Contact Info Section -->
     <section id="contact-info" class="contact-info">
         <h2>Contact Us</h2>
@@ -355,6 +478,39 @@
     <footer>
         <p>&copy; 2024 TRS FORMS | All Rights Reserved</p>
     </footer> 
+
+    <script>
+        // JavaScript to handle employee transitions
+        let employees = document.querySelectorAll('.employee');
+        let currentEmployeeIndex = 0;
+
+        // Show the current employee
+        function showEmployee(index) {
+            // Hide all employees first
+            employees.forEach((employee) => {
+                employee.style.display = 'none';
+                employee.style.opacity = '0';
+                employee.style.transform = 'translateX(100%)';
+            });
+
+            // Show the current employee
+            let currentEmployee = employees[index];
+            currentEmployee.style.display = 'flex'; // Display the employee
+            setTimeout(() => {
+                currentEmployee.style.opacity = '1'; // Fade in
+                currentEmployee.style.transform = 'translateX(0)'; // Scroll in
+            }, 10); // Tiny delay to trigger the transition
+        }
+
+        // Show first employee immediately
+        showEmployee(currentEmployeeIndex);
+
+        // Switch to next employee every 10 seconds (5 seconds for display + 5 seconds pause)
+        setInterval(() => {
+            currentEmployeeIndex = (currentEmployeeIndex + 1) % employees.length;
+            showEmployee(currentEmployeeIndex);
+        }, 5000); // Change every 10 seconds
+    </script>
 
 </body>
 </html>
