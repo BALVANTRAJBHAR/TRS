@@ -309,6 +309,25 @@
                 font-size: 16px;
             }
         }
+         /* Arrows */
+        .arrow-left, .arrow-right {
+            position: absolute;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #333;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .arrow-left {
+            left: 10px;
+            top: 1900px;
+        }
+
+        .arrow-right {
+            right: 10px;
+            top: 1900px;
+        }
 
     </style>
 </head>
@@ -377,6 +396,7 @@
 
      <!-- Employee Scrolling Section -->
 <section class="employee-scroll">
+    <div class="arrow-left">&#8592;</div>
     <div class="employee">
         <img src="bbu.jpg" alt="Employee Image" class="employee-img">
         <div class="employee-info">
@@ -454,6 +474,7 @@
         </div>
     </div>
     <!-- Add more employee divs as needed -->
+    <div class="arrow-right">&#8594;</div>
 </section>
 
     <!-- Contact Info Section -->
@@ -510,6 +531,18 @@
             currentEmployeeIndex = (currentEmployeeIndex + 1) % employees.length;
             showEmployee(currentEmployeeIndex);
         }, 5000); // Change every 10 seconds
+
+        // Handle left arrow click
+    document.querySelector('.arrow-left').addEventListener('click', () => {
+            currentEmployeeIndex = (currentEmployeeIndex - 1 + employees.length) % employees.length;
+            showEmployee(currentEmployeeIndex);
+        });
+
+        // Handle right arrow click
+        document.querySelector('.arrow-right').addEventListener('click', () => {
+            currentEmployeeIndex = (currentEmployeeIndex + 1) % employees.length;
+            showEmployee(currentEmployeeIndex);
+        });
     </script>
 
 </body>
